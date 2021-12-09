@@ -1,0 +1,25 @@
+.footer { 
+  padding: 44px 0 50px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 300;
+  background: $white;
+  color: $black; 
+  width: 100%;
+
+  .center {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1148px;
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    @media(max-width: 375px){
+      flex-direction: column;
+    }
+  } 
+
+}

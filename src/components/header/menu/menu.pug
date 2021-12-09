@@ -1,0 +1,16 @@
+-
+    let nav = [
+        {href: '##', linkAlt: 'Главная', title: 'Главная'},
+        {href: '##', linkAlt: 'Услуги', title: 'Услуги'},
+        {href: '##', linkAlt: 'Кейсы', title: 'Кейсы'},
+        {href: '##', linkAlt: 'О компании', title: 'о компании'},
+        {href: '##', linkAlt: 'Контакты', title: 'контакты'},
+    ]
+
+
+
+nav.nav
+    ul.nav__list
+        each item in nav
+            li.nav__item
+                a.nav__link(href= item.href, alt= item.linkAlt)= item.title

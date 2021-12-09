@@ -1,0 +1,72 @@
+@mixin transition($time: 0.3s, $duration: 0s) {
+  transition: all $time ease $duration;
+}
+
+// @mixin placeholder {
+//   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+//   @each $placeholder in $placeholders {
+//     &:#{$placeholder}-placeholder {
+//       @content;
+//     }
+//   }
+// }
+
+@mixin format-text($font-size: 14px, $font-weight: 400, $color: false, $line-height: false) {
+  font-size: px2em($font-size);
+  font-weight: $font-weight;
+
+  @if $color {
+    color: $color;
+  }
+
+  @if $line-height {
+    line-height: px2em($line-height);
+  } @else {
+    line-height: 100%;
+  }
+}
+
+
+@mixin center {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// add muted bg
+@mixin muted($color: #000, $opacity: 0.5) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($color, $opacity);
+  }
+}
+
+@mixin gradient($deg: '-45deg', $bg1: '#7f20da' , $bg2: '#e05a6c') {
+  background-image: linear-gradient($deg, $bg1 0%, $bg2 100%);
+}
+
+@mixin classMod($class) {
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      @each $name, $width in $container-max-widths {
+        @if ($name == xs and $breakpoint == $name) {
+          .#{$class} {
+            @content;
+          }
+        } @else if ($breakpoint == $name and $name != xs) {
+          .#{$class}-#{$name} {
+            @content;
+          }
+        }
+      }
+    }
+  }
+}

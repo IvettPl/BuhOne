@@ -1,0 +1,70 @@
+// Контрольные точки;
+$breakpointsPhone:             400px;
+$breakpointsPhoneWide:         480px;
+$breakpointsPhablet:           540px;
+$breakpointsTabletSmall:       640px;
+$breakpointsTablet:            768px;
+$breakpointsTabletWide:        992px;
+$breakpointsDesktop:           1200px;
+$breakpointsDesktopWideMd:     1400px;
+$breakpointsDesktopWide:       1600px;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+) !default;
+
+// Grids
+$grid-columns:               12 !default;
+$grid-grid-gutter-xs:     16px !default;
+$grid-grid-gutter-sm:     30px !default;
+$grid-grid-gutter-md:     30px !default;
+$grid-grid-gutter-lg:     30px !default;
+$grid-grid-gutter-xl:     30px !default;
+$grid-grid-gutter-xxl:     40px !default;
+$grid-gutter-widths: (
+        xs: $grid-grid-gutter-xs,
+        sm: $grid-grid-gutter-sm,
+        md: $grid-grid-gutter-md,
+        lg: $grid-grid-gutter-lg,
+        xl: $grid-grid-gutter-xl,
+        xxl: $grid-grid-gutter-xxl
+) !default;
+$container-max-widths: (
+        xs: 100%,
+        sm: 540px,
+        md: 640px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+) !default;
+
+
+// Цвета на сайте
+$blue: #005FA3;
+$grey: #BDBDBD;
+$pink: #FF2970;
+$white: #FFF;
+$black: #000;
+$grayLight: scale-color($black,$lightness:86.5%); // DDD
+
+$baseFS: 15px !default;
+$secondFS: 48px;
+$baseLH: ( 19px / $baseFS );
+$secondLH: 66px;
+$baseFW: 400;
+$baseFSt: normal;
+$baseFF: 'Lato',sans-serif;
+$secondFF: 'Merriweather',Arial,Helvetica,sans-serif;
+$baseFClr: $black;
+$baseBg: $white;
+
+
+$baseLinkColor: $black;
+
+
+

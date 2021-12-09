@@ -1,0 +1,16 @@
+extends extends/base.pug
+append vars
+  - var pageUrl = 'index.html';
+  - var pageTitle = 'Структура сайта';
+  - var classBody = '';
+  - var gridShow = false;
+block styles
+  link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+  link(href="css/index.css", rel="stylesheet" )
+block content
+  main.main
+    include ./../components/banner/banner
+    include ./../components/contacts/contacts
+ 
+block scripts
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

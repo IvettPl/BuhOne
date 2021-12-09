@@ -1,0 +1,19 @@
+.lnk,
+a {
+  color: $baseLinkColor;
+  text-decoration: none; 
+  @include transition();
+}
+.lnk:hover,
+a:hover {
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+
+
+.lnk_reverse {
+  border-bottom-color: transparent;
+  &:hover {
+    border-bottom-color: currentColor;
+  }
+}

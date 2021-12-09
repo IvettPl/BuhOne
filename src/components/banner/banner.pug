@@ -1,0 +1,36 @@
+-
+    let banner = [
+        {
+            srcset: "./images/banner-slide-1.webp 1x, ./images/banner-slide-1@2x.webp 2x", 
+            imgPath: './images/banner-slide-1.jpg',
+            imgSrcset: './images/banner-slide-1@2x.jpg 2x',
+            imgAlt: 'Бухгалтерские услуги в Санкт-Петербурге',
+            bannerTitle: 'Бухгалтерские услуги <span>в Санкт-Петербурге</span>',
+            btnText: 'Наша презентация'
+        },
+        {
+            srcset: "./images/banner-slide-1.webp 1x, ./images/banner-slide-1@2x.webp 2x", 
+            imgPath: './images/banner-slide-1.jpg',
+            imgSrcset: './images/banner-slide-1@2x.jpg 2x',
+            imgAlt: 'Бухгалтерские услуги в Санкт-Петербурге2',
+            bannerTitle: 'Бухгалтерские услуги <span>в Санкт-Петербурге2</span>',
+            btnText: 'Наша презентация2'
+        },        
+    ]
+
+.banner
+    .swiper.js-banner__swiper
+        .swiper-wrapper
+            each item in banner  
+                .swiper-slide 
+                    picture
+                        source(srcset= item.srcset type="image/webp")
+                        img(src= item.imgPath, srcset= item.imgSrcset,  alt= item.imgAlt)
+                    .banner__text
+                        .banner__title!= item.bannerTitle
+                        button.btn(type='button')= item.btnText
+        .swiper-buttons
+            .swiper-button-prev
+            .swiper-button-next
+        .swiper-pagination
+    

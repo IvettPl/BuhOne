@@ -1,0 +1,65 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $baseFF;
+  color: $baseFClr;
+  font-size: $baseFS;
+  line-height: $baseLH;
+  font-weight: $baseFW;
+  font-style: $baseFSt;
+  min-height: 100%;
+  min-width: 320px;
+  position: relative;
+  background: $baseBg;
+}
+
+button,
+input[type='submit'] {
+  @include transition();
+}
+li {
+  list-style: none;
+}
+ul, 
+p,
+h2 {
+  margin: 0;
+  padding: 0;
+} 
+
+img {
+  max-width: 100%;
+}
+
+.slick-slider *,
+input, button,
+a:focus, a:hover {
+  outline: none !important;
+}  
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.main {
+  margin-bottom: auto;
+  padding-top: 113px;
+  @media(max-width: 1023px) {
+    padding-top: 90px;
+  }
+}
+
+.center {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1148px;
+  box-sizing: border-box;
+}

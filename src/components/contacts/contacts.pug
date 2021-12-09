@@ -1,0 +1,28 @@
+.contacts
+    .center 
+        .contacts__columns
+            .contacts__column
+                h2 Связь с нами
+                p У вас остались вопросы? Напишите нам - мы ответим в ближайшее время!
+                .contacts__links 
+                    .contacts__link
+                        +svg('phone')
+                        a(href= 'tel:81112223344') 8 (111) 222-33-44
+                    .contacts__link  
+                        +svg('mail')
+                        a(href= 'mailto:order@buhone.ru') order@buhone.ru
+
+            .contacts__column
+                form(action="" method="POST") 
+                    .contacts__form-fields
+                        .contacts__form-field 
+                            label(for="name")  Имя
+                            input(type="text" id="name" name="name" placeholder="Имя") 
+                        .contacts__form-field 
+                            label(for="surname")  Фамилия
+                            input(type="text" id="surname" name="surname" placeholder="Фамилия") 
+                    .contacts__form-area 
+                        label(for="message")  Сообщение
+                        textarea(name="message" id="message" placeholder="Ваше сообщение")   
+                        
+                    button.btn(type="submit") Отправить сообщение

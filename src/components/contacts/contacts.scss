@@ -1,0 +1,189 @@
+.contacts{
+    padding: 125px 0 140px;
+    width: 100%;
+    background: url(../images/banner-slide-2.jpg) no-repeat center;
+    background-size: cover;
+    @media(max-width: 767px){ 
+        padding: 40px 0;
+    }  
+
+    &__form {
+        &-fields {
+            margin-bottom: 35px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between; 
+            @media(max-width: 500px){ 
+                flex-direction: column;
+            } 
+        }
+        &-field {
+            padding-bottom: 15px;
+            width: calc(50% - 15px);
+            position: relative;
+            border-bottom: 1px solid $white;
+
+            input {
+                font-family: $baseFF;
+                font-size: 21px;
+                line-height: 28px;
+                color: $grey;
+                width: 100%;
+                border: 0;
+                background: none;
+                box-sizing: border-box;
+            } 
+            &:last-child {
+                @media(max-width: 500px){ 
+                    margin-top: 20px;
+                } 
+            }
+            @media(max-width: 500px){ 
+               width: 100%;
+            } 
+        }
+        &-area  {
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+            width: 100%;
+            border-bottom: 1px solid $white;
+            textarea {
+                font-family: $baseFF;
+                font-size: 21px;
+                line-height: 28px;
+                color: $grey;
+                background: none;
+                border: 0;
+                width: 100%;
+                resize: none;
+                min-height: 105px;
+                box-sizing: border-box;
+            } 
+        }
+    }
+        
+
+    h2 {
+        margin: -8px 0 60px;
+        font-family: $secondFF;
+        font-size: $secondFS;
+        line-height: 69px;
+        color: $white;
+
+        @media(max-width: 960px){ 
+            margin: -8px 0 30px;
+            font-size: 36px;
+            line-height: 46px;
+        }  
+        @media(max-width: 480px){ 
+            margin: -8px 0 20px;
+            font-size: 20px;
+            line-height: 36px;
+        } 
+    }
+    p {
+        margin-bottom: 80px;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 300;
+        color: $grey; 
+        @media(max-width: 767px){ 
+            margin-bottom: 30px; 
+        } 
+    }
+    &__links {
+        display: flex;
+        align-items: center;
+        
+        @media(max-width: 1023px){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @media(max-width: 767px){ 
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }  
+        @media(max-width: 500px){ 
+            flex-direction: column;
+        } 
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        a { 
+            font-size: 21px;
+            line-height: 29px;
+            font-weight: 300;
+            color: $white;
+            white-space: nowrap;
+        }
+
+        svg {
+            margin-right: 15px;
+            fill: $white;
+        }
+        .icon_phone { 
+            width: 30px;
+            height: 30px;
+        }
+        .icon_mail {
+            width: 39px;
+            height: 30px; 
+        }
+        &:last-child {
+            
+            margin-left: 40px;
+            @media(max-width: 1023px){
+                margin:20px 0 0;
+            }  
+            @media(max-width: 767px){ 
+                margin:0;
+            }  
+            @media(max-width: 500px){ 
+                margin-top: 20px;
+            } 
+        }
+     
+    }
+
+    &__columns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width: 767px){ 
+            flex-direction: column;
+        }  
+    }
+
+    &__column {
+        width: 48.7364%;
+
+        &:first-child {
+            width: 40.16245%;
+
+            @media(max-width: 767px){ 
+                margin-bottom: 50px;
+                width: 100%;
+            }  
+        }
+        
+        label {
+            margin-bottom: 15px;
+            display: block;
+            font-size: 16px;
+            line-height: 22px;
+            color: $white;
+        }
+        
+        .btn {
+            margin-left: auto;
+            display: block;
+        }
+        @media(max-width: 767px){ 
+            width: 100%;
+        }   
+    }
+}
